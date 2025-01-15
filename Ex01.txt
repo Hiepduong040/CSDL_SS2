@@ -1,0 +1,40 @@
+a) Trong SQL, các kiểu dữ liệu cơ bản thường dùng bao gồm:
+
+1. INTEGER:
+	Mô tả: Dùng để lưu trữ số nguyên.
+	Đặc điểm:
+		Không chứa phần thập phân.
+		Dung lượng lưu trữ: 4 bytes.
+		Phạm vi giá trị: -2,147,483,648 đến 2,147,483,647.
+2. VARCHAR(n):
+	Mô tả: Dùng để lưu trữ chuỗi ký tự với độ dài tối đa là n.
+	Đặc điểm:
+		size: 0-65535, 
+		Dung lượng lưu trữ: Tương ứng với số lượng ký tự thực tế cộng thêm 1 hoặc 2 bytes để lưu độ dài của chuỗi.
+3. DATE:
+	Mô tả: Dùng để lưu trữ ngày tháng theo định dạng yyyy-MM-dd.
+	Đặc điểm:
+		Lưu trữ thông tin ngày tháng, không bao gồm thời gian.
+		Dung lượng lưu trữ: 3 bytes.
+		Phạm vi giá trị: Từ 1000-01-01 đến 9999-12-31.Tuy nhiên mySQL mới cập nhật đến năm 2155 nên khi gần đến năm ấy sẽ có bản update thêm năm.
+4. FLOAT(m, d):
+	Mô tả: Dùng để lưu trữ số thực, trong đó m là tổng số chữ số và d là số chữ số phần thập phân.
+	Đặc điểm:
+		m là tổng số chữ số tối đa, bao gồm cả phần nguyên và phần thập phân.
+		d là số chữ số tối đa ở phần thập phân.
+		Dung lượng lưu trữ: 4 bytes.
+		Giá trị hợp lệ phụ thuộc vào m và d. Ví dụ, FLOAT(7,4) lưu trữ giá trị từ -999.9999 đến 999.9999.
+5. BOOLEAN:
+	Mô tả: Dùng để lưu trữ giá trị logic, đại diện cho TRUE hoặc FALSE.
+	Đặc điểm:
+		Trong SQL, thường được biểu diễn bằng 1 byte.
+		Giá trị hợp lệ là TRUE (hoặc 1) và FALSE (hoặc 0).
+
+b) Xác định kiểu dữ liệu phù hợp cho các cột:
+	•	MaSV (mã sinh viên, giá trị nguyên): int
+
+	•	HoTen (họ tên, chuỗi ký tự): varchar
+
+	•	NgaySinh (ngày sinh): date
+
+	•	DiemTrungBinh (điểm trung bình, giá trị thực): float

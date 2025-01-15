@@ -1,0 +1,14 @@
+a) Định nghĩa và ví dụ minh họa của 3 ràng buộc:
+
+PRIMARY KEY = NOT NULL + UNIQUE: Một hoặc nhiều cột duy nhất xác định một hàng trong bảng. Ràng buộc này đảm bảo rằng mỗi bản ghi trong bảng có một giá trị duy nhất và không thể là NULL.
+Ví dụ: CREATE TABLE Student (ID INT PRIMARY KEY, Ten VARCHAR(100));
+
+NOT NULL: Cột yêu cầu cần có giá trị hợp lệ. Ràng buộc này yêu cầu cột không được chứa giá trị NULL.
+Ví dụ: CREATE TABLE Student (ID INT NOT NULL, Ten VARCHAR(100) NOT NULL);
+
+FOREIGN KEY: Một cột trong một bảng tham chiếu đến khóa chính của một bảng khác, tạo ra mối quan hệ giữa các bảng. Ràng buộc này liên kết một cột trong bảng này với khóa chính (hoặc cột duy nhất) của bảng khác để duy trì tính toàn vẹn dữ liệu.
+Ví dụ: CREATE TABLE Grade (ID INT PRIMARY KEY, MaSV INT, FOREIGN KEY (MaSV) REFERENCES SinhVien(ID));
+
+b) Tại sao cần sử dụng ràng buộc trong cơ sở dữ liệu?
+
+Ràng buộc giúp đảm bảo tính toàn vẹn và nhất quán của dữ liệu, ngăn ngừa việc nhập sai dữ liệu, và duy trì mối quan hệ giữa các bảng, từ đó hỗ trợ việc quản lý, truy vấn và thao tác với dữ liệu hiệu quả hơn.
